@@ -126,6 +126,7 @@ main img {
 .werkvormen div img:last-child {
     height: 20px;
     width: auto;
+    float: right;
 }
 
 footer {
@@ -311,8 +312,6 @@ footer {
 
     .prof::before {
         content: "Profile";
-        justify-content: center;
-        display: flex;
     }
 
     .brand-title img {
