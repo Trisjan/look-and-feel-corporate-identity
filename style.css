@@ -5,6 +5,7 @@
 
 html {
     height: 100%;
+    --dark-blue: #343488;
 }
 
 section {
@@ -13,8 +14,7 @@ section {
 }
 
 body {
-    margin: 1em 0em;
-    padding: 1em 0em;
+    margin: 10px 0em;
     position: relative;
     min-height: 100%;
     padding-bottom: 6.74rem;
@@ -83,10 +83,8 @@ nav {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2em;
-    justify-content: center;
-    align-content: center;
-    justify-self: center;
-    margin: 50px;
+    margin-inline: auto;
+    margin-block: auto;
 }
 
 .categories li {
@@ -101,7 +99,6 @@ nav {
 
 main {
     margin: 0 2em;
-    padding: 0 2em;
 }
 
 main img {
@@ -113,9 +110,17 @@ main img {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2em;
-    justify-content: center;
-    align-content: center;
-    justify-self: center;
+    margin-inline: auto;
+}
+
+.werkvormen div {
+    margin-inline: auto;
+}
+
+.werkvormen div img {
+    height: auto;
+    max-width: 100%;
+    width: auto\9;
 }
 
 .werkvormen div img:last-child {
@@ -137,19 +142,23 @@ footer {
 }
 
 /* TABLET SCREEN / 2 COLUMN SCREEN */
-@media (max-width: 1600px) {
+@media (max-width: 1320px) {
     .werkvormen {
         display:grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 2em;
-        justify-content: center;
-        align-content: center;
-        justify-self: center;
+        margin-inline: auto;
     }
 
     .werkvormen div img {
-        width: 400px;
-        height: 250px;
+        max-width: 100%;
+        height: auto;
+        width: auto\9; /* ie8 */
+    }
+
+    .werkvormen div img:last-child {
+        height: 20px;
+        width: auto;
     }
 }
 
@@ -158,14 +167,18 @@ footer {
         display:grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 2em;
-        justify-content: center;
-        align-content: center;
-        justify-self: center;
+        margin-inline: auto;
     }
 
     .werkvormen div img {
-        width: 300px;
-        height: 184px;
+        max-width: 100%;
+        height: auto;
+        width: auto\9; /* ie8 */
+    }
+
+    .werkvormen div img:last-child {
+        height: 17px;
+        width: auto;
     }
 }
 
@@ -228,14 +241,18 @@ footer {
         display:grid;
         grid-template-columns: 1fr;
         grid-gap: 2em;
-        justify-content: center;
-        align-content: center;
-        justify-self: center;
+        margin-inline: auto;
     }
 
     .werkvormen div img {
-        width: 300px;
-        height: 184px;
+        max-width: 100%;
+        height: auto;
+        width: auto\9; /* ie8 */
+    }
+
+    .werkvormen div img:last-child {
+        height: 14px;
+        width: auto;
     }
 
     .categories ul {
@@ -294,7 +311,8 @@ footer {
 
     .prof::before {
         content: "Profile";
-
+        justify-content: center;
+        display: flex;
     }
 
     .brand-title img {
@@ -307,14 +325,18 @@ footer {
         display:grid;
         grid-template-columns: 1fr;
         grid-gap: 2em;
-        justify-content: center;
-        align-content: center;
-        justify-self: center;
+        margin-inline: auto;
     }
 
     .werkvormen div img {
-        width: 250px;
-        height: 153px;
+        max-width: 100%;
+        height: auto;
+        width: auto\9; /* ie8 */
+    }
+
+    .werkvormen div img:last-child {
+        height: 10px;
+        width: auto;
     }
 
     .categories ul {
